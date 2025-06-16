@@ -1,8 +1,8 @@
-# Prediksi Harga Rumah Berdasarkan Data Statistik Area
+# House Price Prediction Based on Area Statistics
 
-Proyek ini bertujuan untuk memprediksi harga rumah berdasarkan data statistik area menggunakan model regresi linier. Dataset yang digunakan berisi informasi tentang pendapatan rata-rata area, usia rumah, jumlah kamar, jumlah kamar tidur, populasi area, harga rumah, dan alamat.
+This project aims to predict house prices based on area statistics using a linear regression model. The dataset contains information about average area income, house age, number of rooms, number of bedrooms, area population, house price, and address.
 
-## Struktur Proyek
+## Project Structure
 
 ```
 readme.md
@@ -12,67 +12,67 @@ src/
     index.ipynb
 ```
 
-- **`data/dataset.csv`**: Dataset yang digunakan untuk analisis dan pelatihan model.
-- **`src/index.ipynb`**: Notebook Jupyter yang berisi kode untuk analisis data, visualisasi, pelatihan model, dan evaluasi.
+- **`data/dataset.csv`**: The dataset used for analysis and model training.
+- **`src/index.ipynb`**: Jupyter Notebook containing code for data analysis, visualization, model training, and evaluation.
 
-## Fitur Proyek
+## Project Features
 
-1. **Analisis Data**:
-   - Menampilkan informasi dataset (`df.info()`).
-   - Statistik deskriptif (`df.describe()`).
-   - Visualisasi distribusi fitur dan hubungan antar fitur.
+1. **Data Analysis**:
+   - Display dataset information (`df.info()`).
+   - Descriptive statistics (`df.describe()`).
+   - Visualize feature distributions and relationships.
 
-2. **Preprocessing Data**:
-   - Menghapus nilai kosong (`df.dropna()`).
-   - Memisahkan fitur dan target untuk pelatihan model.
+2. **Data Preprocessing**:
+   - Remove missing values (`df.dropna()`).
+   - Separate features and target for model training.
 
-3. **Visualisasi**:
-   - Pairplot untuk melihat hubungan antar fitur.
-   - Heatmap untuk melihat korelasi antar fitur.
-   - Histogram distribusi harga rumah.
+3. **Visualization**:
+   - Pairplot to observe relationships between features.
+   - Heatmap to analyze feature correlations.
+   - Histogram for house price distribution.
 
 4. **Modeling**:
-   - Menggunakan regresi linier untuk memprediksi harga rumah.
-   - Evaluasi model menggunakan metrik seperti MAE, MSE, RMSE, dan R².
+   - Use linear regression to predict house prices.
+   - Evaluate the model using metrics such as MAE, MSE, RMSE, and R².
 
-5. **Prediksi**:
-   - Prediksi harga rumah berdasarkan data baru.
+5. **Prediction**:
+   - Predict house prices based on new data.
 
-## Cara Menjalankan Proyek
+## How to Run the Project
 
-1. **Persiapan Lingkungan**:
-   - Pastikan Python dan Jupyter Notebook telah terinstal.
-   - Instal pustaka yang diperlukan:
+1. **Environment Setup**:
+   - Ensure Python and Jupyter Notebook are installed.
+   - Install required libraries:
      ```bash
      pip install pandas numpy seaborn matplotlib scikit-learn
      ```
 
-2. **Menjalankan Notebook**:
-   - Buka file `src/index.ipynb` menggunakan Jupyter Notebook.
-   - Jalankan setiap sel untuk melakukan analisis, pelatihan model, dan prediksi.
+2. **Run the Notebook**:
+   - Open the `src/index.ipynb` file using Jupyter Notebook.
+   - Execute each cell to perform analysis, train the model, and make predictions.
 
 ## Dataset
 
-Dataset berisi 5000 baris data dengan kolom berikut:
-- `Avg. Area Income`: Pendapatan rata-rata area.
-- `Avg. Area House Age`: Usia rata-rata rumah di area.
-- `Avg. Area Number of Rooms`: Jumlah rata-rata kamar di rumah.
-- `Avg. Area Number of Bedrooms`: Jumlah rata-rata kamar tidur di rumah.
-- `Area Population`: Populasi area.
-- `Price`: Harga rumah.
-- `Address`: Alamat rumah.
+The dataset contains 5000 rows with the following columns:
+- `Avg. Area Income`: Average income of the area.
+- `Avg. Area House Age`: Average age of houses in the area.
+- `Avg. Area Number of Rooms`: Average number of rooms in houses.
+- `Avg. Area Number of Bedrooms`: Average number of bedrooms in houses.
+- `Area Population`: Population of the area.
+- `Price`: House price.
+- `Address`: Address of the house.
 
-## Hasil Model
+## Model Results
 
-Model regresi linier menghasilkan metrik evaluasi berikut:
-- **Mean Absolute Error (MAE)**: Nilai rata-rata kesalahan absolut.
-- **Mean Squared Error (MSE)**: Nilai rata-rata kesalahan kuadrat.
-- **Root Mean Squared Error (RMSE)**: Akar dari MSE.
-- **R² Score**: Koefisien determinasi untuk mengukur performa model.
+The linear regression model produces the following evaluation metrics:
+- **Mean Absolute Error (MAE)**: Average absolute error.
+- **Mean Squared Error (MSE)**: Average squared error.
+- **Root Mean Squared Error (RMSE)**: Square root of MSE.
+- **R² Score**: Coefficient of determination to measure model performance.
 
-## Prediksi Data Baru
+## Predicting New Data
 
-Contoh prediksi harga rumah berdasarkan data baru:
+Example of predicting house prices based on new data:
 ```python
 new_data = pd.DataFrame({
     'Avg. Area Income': [74568.64],
@@ -86,6 +86,6 @@ new_predictions = lm.predict(new_data)
 print(f"Predicted Price for new data: {new_predictions[0]:.0f}")
 ```
 
-## Lisensi
+## License
 
-Proyek ini dilisensikan di bawah
+This project is licensed under the [MIT License](LICENSE).
